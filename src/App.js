@@ -49,7 +49,7 @@ function App() {
   return (
     <div>
       <div className='heading'>
-        <h1>Flashcard Quiz</h1>
+        <h1> Flashcard Quiz </h1>
       </div>
       <form className="header" onSubmit={handleSubmit}>
         <div className="form-group">
