@@ -26,7 +26,7 @@ export default function Flashcard({ flashcard }) {
             onClick={() => setFlip(!flip)}
         >
             <div className="front" ref={frontEl}>
-                {flashcard.question}
+                <div className="question"> {flashcard.question} </div>
                 <div className="flashcard-options">
                     {flashcard.options.map(option => {
                         return <div className="flashcard-option" key={option}>
