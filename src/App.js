@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css'
 import axios from 'axios'
 import Home from './Home';
 import Loader from './Loader';
 
 function App() {
-  const [flashcards, setFlashcards] = useState([])
   const [categories, setCategories] = useState([])
   const [isLoading, setisLoading] = useState(true);
 
