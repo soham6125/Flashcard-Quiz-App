@@ -7,7 +7,6 @@ import Loader from './Loader';
 function App() {
   const [categories, setCategories] = useState([])
   const [isLoading, setisLoading] = useState(true);
-
   useEffect(() => {
     axios
       .get('https://opentdb.com/api_category.php')
