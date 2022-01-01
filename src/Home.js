@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import './Home.css';
 import axios from 'axios'
 import FlashcardList from './FlashcardList';
+import { FormControl, InputLabel, Select, MenuItem, Box } from '@mui/material';
 
 function Home(props) {
      
@@ -46,16 +47,35 @@ function Home(props) {
           </div>
           <form className="header" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label className="category"> Category </label>
-              <select id="category" ref={categoryEl}>
-                {categories.map(category => {
-                  return <option value={category.id} key={category.id}> {category.name} </option>
-                })}
-              </select>
+              <Box sx={{ minWidth: 400, marginTop: 1 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="select-label"> Category </InputLabel>
+                  <Select
+                    sx={{ maxHeight: 50 }}
+                    labelId="select-label"
+                    id="category"
+                    ref={categoryEl}
+                  >
+                    {categories.map(category => {
+                      return <MenuItem value={category.id} key={category.id}> {category.name} </MenuItem>
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
             </div>
             <div className="form-group">
-              <label className="amount">Number of Questions</label>
-              <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl}></input>
+              <Box>
+                <InputLabel id="select-label"> Number of Questions </InputLabel>
+                <input 
+                 type="number" 
+                 labelId="select-label" 
+                 id="amount" 
+                 min="1" 
+                 step="1" 
+                 defaultValue={10} 
+                 ref={amountEl}>
+                </input>
+              </Box>
             </div>
             <div className="form-group">
               <button className="bn3637 bn36"> Generate </button>

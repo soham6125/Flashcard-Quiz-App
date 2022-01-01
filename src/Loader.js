@@ -3,9 +3,11 @@ import './Loader.css'
 
 function Loader() {
     return (
-        <div class='loader'>
-            <div></div>
-            <div></div>
+        <div className='loading-page'>
+            <div className='loader'>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     )
 }
