@@ -3,7 +3,10 @@ import './Loader.css'
 
 function Loader() {
     return (
-        <div class="clock-loader"></div>
+        <div class='loader'>
+            <div></div>
+            <div></div>
+        </div>
     )
 }
 
