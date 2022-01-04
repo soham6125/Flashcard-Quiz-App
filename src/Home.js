@@ -5,7 +5,7 @@ import FlashcardList from './FlashcardList';
 import { FormControl, InputLabel, Select, MenuItem, Box } from '@mui/material';
 
 function Home(props) {
-     
+
   const [flashcards, setFlashcards] = useState([])
   const [categories] = useState(props.categories)
 
@@ -47,13 +47,17 @@ function Home(props) {
           </div>
           <form className="header" onSubmit={handleSubmit}>
             <div className="form-group">
-              <Box sx={{ minWidth: 400, marginTop: 1 }}>
-                <FormControl fullWidth>
-                  <InputLabel id="select-label"> Category </InputLabel>
+              <Box style={{ marginTop: 9 }}>
+                <FormControl 
+                  style={{ minWidth: 400}}
+                  size="small"
+                >
+                  <InputLabel id="select-standard-label" style={{ color: "black" }}> Category </InputLabel>
                   <Select
-                    sx={{ maxHeight: 50 }}
-                    labelId="select-label"
+                    style={{ backgroundColor: "white" }}
+                    labelId="select-standard-label"
                     id="category"
+                    label="Category"
                     ref={categoryEl}
                   >
                     {categories.map(category => {
@@ -68,7 +72,6 @@ function Home(props) {
                 <InputLabel id="select-label"> Number of Questions </InputLabel>
                 <input 
                  type="number" 
-                 labelId="select-label" 
                  id="amount" 
                  min="1" 
                  step="1" 

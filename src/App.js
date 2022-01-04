@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import Home from './Home';
-import Loader from './Loader';
 
 function App() {
   const [categories, setCategories] = useState([])
@@ -18,7 +17,7 @@ function App() {
 
   return (
     <div>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       {!isLoading && <Home categories={categories} />}
     </div>
   );
